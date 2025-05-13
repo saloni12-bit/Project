@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="calculator-container">
+        <section class="calculator" role="application" aria-label="Calculator">
+            <header class="calculator-header">
+                <h1>Calculator</h1>
+            </header>
+            
+            <div class="display" role="textbox" aria-label="Calculator display">
+                <input type="text" id="result" readonly aria-label="Current calculation">
+            </div>
+
+            <div class="buttons" role="group" aria-label="Calculator buttons">
+                <!-- First row -->
+                <button class="operator" onclick="clearDisplay()" aria-label="Clear">C</button>
+                <button class="operator" onclick="deleteLastChar()" aria-label="Delete">DEL</button>
+                <button class="operator" onclick="appendOperator('%')" aria-label="Percentage">%</button>
+                <button class="operator" onclick="appendOperator('/')" aria-label="Divide">/</button>
+
+                <!-- Second row -->
+                <button onclick="appendNumber('7')" aria-label="Seven">7</button>
+                <button onclick="appendNumber('8')" aria-label="Eight">8</button>
+                <button onclick="appendNumber('9')" aria-label="Nine">9</button>
+                <button class="operator" onclick="appendOperator('*')" aria-label="Multiply">×</button>
+
+                <!-- Third row -->
+                <button onclick="appendNumber('4')" aria-label="Four">4</button>
+                <button onclick="appendNumber('5')" aria-label="Five">5</button>
+                <button onclick="appendNumber('6')" aria-label="Six">6</button>
+                <button class="operator" onclick="appendOperator('-')" aria-label="Subtract">-</button>
+
+                <!-- Fourth row -->
+                <button onclick="appendNumber('1')" aria-label="One">1</button>
+                <button onclick="appendNumber('2')" aria-label="Two">2</button>
+                <button onclick="appendNumber('3')" aria-label="Three">3</button>
+                <button class="operator" onclick="appendOperator('+')" aria-label="Add">+</button>
+
+                <!-- Fifth row -->
+                <button onclick="appendNumber('0')" aria-label="Zero">0</button>
+                <button onclick="appendNumber('.')" aria-label="Decimal point">.</button>
+                <button class="equals" onclick="calculate()" aria-label="Equals">=</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 
